@@ -39,16 +39,16 @@ public class ForPalindrome {
         laTailleDeDeuxiemePartie = deuxiemePartie.length();
 
         for (j = 0; j < laTailleDeDeuxiemePartie; j++) {
-                if (premierePartie.charAt(j) == deuxiemePartie.charAt(j)) {
-                    if (j == 0) {
-                        System.out.println("Le comparison est un cours:");
-                    }
-                    System.out.println(premierePartie.charAt(j) + " = " + deuxiemePartie.charAt(j));
-                    compteur++;
-                } else {
-                    System.out.println(premierePartie.charAt(j) + " != " + deuxiemePartie.charAt(j));
+            if (premierePartie.charAt(j) == deuxiemePartie.charAt(j)) {
+                if (j == 0) {
+                    System.out.println("Le comparison est un cours:");
                 }
+                System.out.println(premierePartie.charAt(j) + " = " + deuxiemePartie.charAt(j));
+                compteur++;
+            } else {
+                System.out.println(premierePartie.charAt(j) + " != " + deuxiemePartie.charAt(j));
             }
+        }
         if (compteur == laTailleDeDeuxiemePartie) {
             System.out.print("La chaine de caracteres " + "'" + chaineSaisie + "'" + " est un palindrome.");
         } else {
