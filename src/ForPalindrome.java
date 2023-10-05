@@ -2,13 +2,19 @@ import clavier.In;
 
 public class ForPalindrome {
     public static void main(String[] args) {
-        String chaineSaisie = null, chaineApresTrim = null, chaineApresSupEsp = null;
+        String chaineSaisie = null, chaineApresTrim = null, chaineApresSupEsp = "";
         String premierePartie = null, deuxiemePartie = null, deuxiemePartieInverse = "";
         int i = 0, j = 0, laTaille = 0, laTailleDeDeuxiemePartie = 0, compteur = 0;
 
         System.out.print("Entrez votre phrase: ");
         chaineSaisie = In.readString();
         chaineApresTrim = chaineSaisie.toLowerCase().trim();
+
+        for (i = 0; i < chaineApresTrim.length(); i++) {
+            if (chaineApresTrim.charAt(i) != ' ') {
+                chaineApresSupEsp = chaineApresSupEsp + chaineApresTrim.charAt(i);
+            }
+        }
         chaineApresSupEsp = chaineSaisie.replaceAll(" ", "");
 
         System.out.println("Chaine au debut: " + chaineSaisie);
